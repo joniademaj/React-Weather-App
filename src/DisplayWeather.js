@@ -12,7 +12,9 @@ function DisplayWeather( { data } ) {
                     <img src={data.current.condition.icon} className="img"></img>
                 </div>
                 <div className="temp">
-                    <p>{data.current.temp_c}<sup>o</sup></p>
+                    <p>Celcius: {data.current.temp_c}<sup>o</sup></p>
+                    <p>Fahrenheit: {data.current.temp_f}<sup>o</sup></p>
+                    <p>Wind: {data.current.wind_kph}Kmh <br /> {data.current.wind_mph} Mph</p>
                 </div>
                 <div className="place">
                     <p>{data.location.country}, {data.location.name}</p>

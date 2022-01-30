@@ -7,8 +7,9 @@ function Weather() {
     const [form, setForm] = useState({
         place: "",
     });
-    const [weather, setWeather] = useState([]);
 
+    const [weather, setWeather] = useState([]);
+    
     const weatherData = async (e) => {
         e.preventDefault();
         if(form.place === ""){
@@ -25,6 +26,7 @@ function Weather() {
             setWeather({
                 data: data
             });
+            console.log(data);
         }
     }
 
@@ -51,7 +53,7 @@ function Weather() {
                 <button 
                     className="getweather" 
                     onClick={(e) => weatherData(e)}>
-                    Submit
+                    Serach
                 </button>
             </form>
 
